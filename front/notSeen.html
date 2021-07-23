@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+    <title>notSeen</title>
+</head>
+<body>
+    <header>
+        <nav class="movie-nav" >
+            <ul>
+                <li><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
+                <div class="dropdown" style="float:right;">
+                    <button class="dropbtn"><img src="img/account.png" id="account" alt="account" width="40px"></button>
+                    <div class="dropdown-content" style="left:0;">
+                    <a href="login.html">Log Out</a>
+                    </div>
+                </div>
+                <form id="searchform">
+                  <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
+                  <input type="text" class="form-control" id="inputTitle">
+                </form>
+                <li class="indexnav"><a href="#" class="selected" id="lastchild">NotSeen</a></li>
+                <li class="indexnav"><a href="seen.html"  id="seen">Seen</a></li>
+                <li class="indexnav"><a href="index.html"  id="all">Search</a></li>
+            </ul>
+         </nav>
+    </header>
+    <br>
+    <h1 class="seen-title" >notSeen</h1>
+    <div id="movies" class="flex-container">
+        <div><img class="movie-poster-list" id="movie-poster-notSeen" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+            <button  class="btn">&#9472;</button>
+        <p id="movie-title-list-notSeen" class="movie-poster-list"></p></div>
+
+        <div><img class="movie-poster-list" id="movie-poster-notSeen1" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+            <button  class="btn">&#9472;</button>
+            <p id="movie-title-list-notSeen1" class="movie-poster-list"></p></div>
+
+            <div><img class="movie-poster-list" id="movie-poster-notSeen2" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+                <button  class="btn">&#9472;</button>
+                <p id="movie-title-list-notSeen2" class="movie-poster-list"></p></div>
+    </div>
+    
+</body>
+</html>

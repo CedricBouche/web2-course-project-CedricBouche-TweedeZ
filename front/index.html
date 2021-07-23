@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <script src="movies.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <nav class="movie-nav" >
+        <ul>
+            <li><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
+            <div class="dropdown" style="float:right;">
+              <button class="dropbtn"><img src="img/account.png" id="account" alt="account" width="40px"></button>
+              <div class="dropdown-content" style="left:0;">
+              <a href="login.html">Log Out</a>
+              </div>
+            </div>
+            <form id="searchform">
+              <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
+              <input type="text" class="form-control" id="inputTitle">
+            </form>
+            <li class="indexnav"><a href="notSeen.html" id="lastchild">NotSeen</a></li>
+            <li class="indexnav"><a href="seen.html"  id="seen">Seen</a></li>
+            <li class="indexnav"><a href="#" class="selected" id="all">Search</a></li>
+        </ul>
+     </nav>
+</header>
+<h1 class="title1">Search your movie</h1>
+<div>
+  <h2 id="message">Typ your movie or serie in the search bar on the navigation.</h2>
+</div>
+    <div id="card">
+        <div class="row no-gutters">
+          <img id="movie-poster-search"  src="TBD" class="card-img" alt="...">
+        </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 id="movie-title" class="card-title">Card title</h5>
+              <p id="movie-plot" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p id="movie-releasedate" class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <select name="options" id="options">
+                <option value="NotSeen">NotSeen</option>
+                <option value="Seen">Seen</option>
+              </select>
+              <hr>
+              <button class="btnAdd" id="btnAdd">Add to my list</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</body>
+</html>

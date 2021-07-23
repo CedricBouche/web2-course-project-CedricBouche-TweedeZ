@@ -1,0 +1,434 @@
+/*----------Main---------- */
+html,body{
+    margin: 0;
+    font-family:'Nunito', sans-serif;
+}
+
+/*----------Login & Register---------- */
+.background {
+    position: absolute;
+    top: 0;
+    left: 50%; 
+    width: 50%; 
+    height: 100%;
+    float: left;
+    margin-top: 0;
+}
+
+.title{
+    margin-left: 10%;
+    font-size: 80px;
+    color: #ed4435;
+}
+
+
+
+.welcome{
+    margin-left: 20%;
+    margin-top: 8%;
+    font-size: 30px;
+}
+
+
+#email{
+    margin-left: 12%;
+    width: 23%;
+    height: 50px;
+    border-radius: 100px;
+    border-color: black;
+    border-width: 1px;
+    padding-left: 55px;
+    font-size: larger;
+}
+
+#password{
+    margin-left: 12%;
+    width: 23%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 100px;
+    border-color: black;
+    border-width: 1px;
+    padding-left: 55px;
+    font-size: larger;
+}
+
+.mail{
+    position: absolute;
+    margin-left: 13%;
+    margin-top: 19px;
+    width: 25px;
+}
+
+
+.password{
+    position: absolute;
+    margin-left: 13%;
+    margin-top: 32px;
+    width: 20px;
+}
+
+
+#button-login{
+    margin-left: 12%;
+    width: 26.25%;
+    height: 55px;
+    margin-top: 20px;
+    border-radius: 100px;
+    border-color: #ed4435;
+    background-color: #ed4435 ;
+    color: #fff;
+    border-width: 1px;
+    float: center;
+    font-size: larger;
+    cursor: pointer;
+}
+
+
+#extra{
+    margin-left: 17%;
+    margin-top: 2%;
+}
+
+#link-register{
+    text-decoration: none;
+    color: #ed4435 ;
+}
+
+.movie-nav{
+background-color: #ed4435;
+height: 140px;
+}
+
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 2em;
+    float: right;
+    margin-top: 40px;
+    font-size: 15pt;
+    font-weight: bold;
+
+}
+
+.selected {
+    border-bottom-style: solid;
+}
+
+
+.movie-nav li, ul {
+    display: inline;
+    cursor: pointer;
+    margin: 0;
+}
+
+.seenimage{
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.form-control{
+    outline: 0;
+    border:0;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    float: right;
+    margin-top: 70px;
+    margin-right: 50px;
+    width: 20%;
+    color: #ffffff;
+    font-size: medium;
+    margin-top: 60px;
+}
+
+
+
+
+
+.form-control-content{
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #fff;
+    background-color: #ed4435;
+    float: right;
+    margin-top: 70px;
+    margin-right: 50px;
+    width: 20%;
+    color: #ffffff;
+    font-size: medium;
+    margin-top: 60px;
+}
+
+#account{
+    margin-top: 20px;
+}
+
+
+
+
+#lastchild{
+    margin-right: 40%;
+}
+
+
+/* Bron: https://www.w3schools.com/howto/howto_css_loader.asp */
+#loader {
+    border: 1em solid #ffffff;
+    border-top: 1em solid #343434;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* add button on the poster */
+.flex-container button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #CD151A;
+    color: #ffffff;
+    border-radius: 50%;
+    border-style: none;
+    margin-left: -2em;
+    width: 2em;
+    height: 2em;
+}
+
+.btn {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.seen-title {
+    margin-left: 2.5em;
+    top: 10%;
+}
+
+.seenimage {
+    width: 3em;
+    height: 3em;
+    float: left;
+    margin-right: 3em;
+}
+
+
+
+#add-button.btn {
+    transform: translate(-50%, -50%);
+    background-color: #CD151A;
+    color: #ffffff;
+    border-radius: 50%;
+    border-style: none;
+    margin: 0;
+    width: 2em;
+    height: 2em;
+    margin-left: 35%;
+    position: relative;
+}
+
+.notSeen-button {
+    background-color: #CD151A;
+    color: #ffffff;
+    border: none;
+    height: 2em;
+    width: 15%;
+    border-radius: 15px;
+    float: right;
+    margin-right: 6em;
+}
+
+
+
+.movieinfo {
+    margin-left: 250px;
+    width: 300px;
+}
+
+.all{
+    margin-left: 1em;
+}
+
+.btn-primary{
+    float: right;
+    margin-right: 3%;
+    margin-top: 2.5%;
+    border: none;
+    background-color: #ed4435 ;
+    color: #fff;
+    float: center;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.title1{
+    margin-left: 1em;
+    font-size: 30px;
+    color: #ed4435;
+}
+
+#card{
+    margin-left: 1em;
+}
+
+#movie-poster-search{
+    float: left;
+    margin-left: 2em;
+    margin-top: 2em;
+
+}
+
+#movie-poster-search:hover{
+    animation-name: movie-animation;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    transition-timing-function: ease-in;
+
+}
+
+@keyframes movie-animation {
+    0% {
+        transform: perspective(400px) rotateY(8deg) scale(1);
+    }
+    20% {
+        transform: perspective(400px) rotateY(-13deg) scale(1.1);
+    }
+    100%{
+        transform: perspective(400px) rotateY(0deg) scale(1.2);
+    }
+}
+
+.card-body{
+    float: center;
+    margin-left: 500px;
+    margin-top: 5%;
+    font-size: large;
+    max-width: 60%;
+}
+
+
+.card-title{
+    font-size: 1.5em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#options{
+    background-color: none;
+    color: #ed4435;
+    border: 1px solid#343434 ;
+    border-radius: 2em;
+    width: 12%;
+}
+
+.btnAdd{
+    width: 200px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 100px;
+    border-color: #ed4435;
+    background-color: #ed4435 ;
+    color: #fff;
+    border-width: 1px;
+    float: center;
+    font-size: larger;
+    cursor: pointer;
+}
+
+
+#message{
+    font-weight: 500;
+    float: center;
+    margin-left: 600px;
+    margin-top: 300px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right: 80px;
+    margin-top: 25px;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 130px;
+    height: 30px;
+}
+  
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    float: left;
+    margin: 0;
+    margin-left: 1em;
+}
+  
+
+
+
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
