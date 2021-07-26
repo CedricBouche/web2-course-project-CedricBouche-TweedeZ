@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "front/register.html" ));
 });
 
-//Router for Movies
+//Router for Seen
 bgRouter.route('/movies')
 .get((req,res)=> {
   collection = db.collection("movies");
@@ -45,38 +45,15 @@ bgRouter.route('/movies')
     console.log(result);
   });
   res.send('Somthing');
-});
-
-
-//Router for Users
-bgRouter.route('/register')
-.get((req,res)=> {
-  collection = db.collection("users");
-  collection.find({}).toArray((error, result)=>{
-    if(error) {
-      return res.status(500).send(error);
-    }
-    res.json(result);
+})
+.delete((req,res) => {
+  collection = db.collection("movies");
+  collection.remove(req.body).then(result => {
+    console.log(result);
   });
-})
-.post((req,res)=> {
-  collection = db.collection("users");
-  let newUser = new User({
-    email: req.body.email,
-    password: req.body.password
-  });
-  newUser.save();
-  res.redirect('/');
-})
-.put((req,res)=>{
-})
-.patch((req,res)=>{
+  res.send('Somthing')
 
-})
-.delete((req,res)=>{
 });
-
-
 
 //Router for NotSeen
 bgRouter.route('/notSeen')

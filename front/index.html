@@ -10,27 +10,19 @@
 <body>
   <header>
     <nav class="movie-nav" >
-        <ul>
-            <li><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
-            <div class="dropdown" style="float:right;">
-              <button class="dropbtn"><img src="img/account.png" id="account" alt="account" width="40px"></button>
-              <div class="dropdown-content" style="left:0;">
-              <a href="login.html">Log Out</a>
-              </div>
-            </div>
-            <form id="searchform">
-              <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
-              <input type="text" class="form-control" id="inputTitle">
-            </form>
-            <li class="indexnav"><a href="notSeen.html" id="lastchild">NotSeen</a></li>
-            <li class="indexnav"><a href="seen.html"  id="seen">Seen</a></li>
-            <li class="indexnav"><a href="#" class="selected" id="all">Search</a></li>
-        </ul>
+      <li class="indexnav"><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
+      <li class="indexnav"><a href="#" class="selected" id="nav">Add</a></li>
+      <li class="indexnav"><a href="seen.html"  id="nav">Seen</a></li>
+      <li class="indexnav"><a href="notSeen.html" id="nav">NotSeen</a></li>
+      <li class="indexnav"><form id="searchform">
+        <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
+        <input type="text" class="form-control" id="inputTitle">
+      </form></li>
      </nav>
 </header>
 <h1 class="title1">Search your movie</h1>
 <div>
-  <h2 id="message">Typ your movie or serie in the search bar on the navigation.</h2>
+  <h2 id="message">Type your movie or serie in the search bar on the navigation.</h2>
 </div>
     <div id="card">
         <div class="row no-gutters">

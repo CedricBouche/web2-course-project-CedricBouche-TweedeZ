@@ -10,90 +10,109 @@
 <body>
     <header>
         <nav class="movie-nav" >
-            <ul>
-                <li><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
-                <div class="dropdown" style="float:right;">
-                    <button class="dropbtn"><img src="img/account.png" id="account" alt="account" width="40px"></button>
-                    <div class="dropdown-content" style="left:0;">
-                    <a href="login.html">Log Out</a>
-                    </div>
-                </div>
-                <form id="searchform">
-                  <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
-                  <input type="text" class="form-control" id="inputTitle">
-                </form>
-                <li class="indexnav"><a href="notSeen.html" id="lastchild">NotSeen</a></li>
-                <li class="indexnav"><a href="#" class="selected"  id="seen">Seen</a></li>
-                <li class="indexnav"><a href="index.html"  id="all">Search</a></li>
-            </ul>
-         </nav>
+            <li class="indexnav"><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
+            <li class="indexnav"><a href="index.html"  id="nav">Add</a></li>
+            <li class="indexnav"><a href="#"  id="nav" class="selected">Seen</a></li>
+            <li class="indexnav"><a href="notSeen.html" id="nav">NotSeen</a></li>
+            <li class="indexnav"><form id="searchform">
+              <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
+              <input type="text" class="form-control" id="inputTitle">
+            </form></li>
+           </nav>
     </header>
     <br>
-    <h1 class="seen-title" >Seen</h1>
+    <h1 class="title1">Seen</h1>
+    <p class="filter-title">Sort by:</p>
+    <select name="filter" id="filter">
+        <option value="A - Z">A - Z</option>
+        <option value="Z - A">Z - A</option>
+    </select>
+    <p  id="edit-txt">Edit</p>
+    <img type="button" src="img/Edit@2x.png" alt="Edit icon" id="edit" width="1.5%">
     <div id="movies" class="flex-container">
         <div><img class="movie-poster-list" id="movie-poster" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button  class="btn">&#9472;</button>
-        <p id="movie-title-list" class="movie-poster-list"></p></div>
+            <button type="button" id="delete-btn">&#9472;</button>
+            <p id="movie-title-list" class="movie-poster-list"></p>
+        </div>
+        <div><img class="movie-poster-list" id="movie-poster1" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+            <button type="button" id="delete-btn1">&#9472;</button>
+            <p id="movie-title-list1" class="movie-poster-list"></p> 
+        </div>
         <div><img class="movie-poster-list" id="movie-poster2" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list2" class="movie-poster-list"></p> </div>
+            <button id="delete-btn2">&#9472;</button>
+            <p id="movie-title-list2" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster3" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
+            <button id="delete-btn3">&#9472;</button>
             <p id="movie-title-list3" class="movie-poster-list"></p></div>
         <div><img class="movie-poster-list" id="movie-poster4" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list4" class="movie-poster-list"></p></div>
+            <button id="delete-btn4">&#9472;</button>
+            <p id="movie-title-list4" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster5" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list5" class="movie-poster-list"></p></div>
+            <button id="delete-btn5">&#9472;</button>
+            <p id="movie-title-list5" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster6" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list6" class="movie-poster-list"></p></div>
+            <button id="delete-btn6">&#9472;</button>
+            <p id="movie-title-list6" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster7" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list7" class="movie-poster-list"></p></div>
+            <button id="delete-btn7">&#9472;</button>
+            <p id="movie-title-list7" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster8" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list8" class="movie-poster-list"></p></div>
+            <button id="delete-btn8">&#9472;</button>
+            <p id="movie-title-list8" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster9" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list9" class="movie-poster-list"></p></div>
-        <div><img class="movie-poster-list" id="movie-poster10" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list10" class="movie-poster-list"></p></div>
-        <div> <img class="movie-poster-list" id="movie-poster11" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list11" class="movie-poster-list"></p></div>
+            <button id="delete-btn9">&#9472;</button>
+            <p id="movie-title-list9" class="movie-poster-list"></p>
+        </div>
+        <div> <img class="movie-poster-list" id="movie-poster10" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+            <button id="delete-btn10">&#9472;</button>
+            <p id="movie-title-list10" class="movie-poster-list"></p>
+        </div>
+        <div><img class="movie-poster-list" id="movie-poster11" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+            <button id="delete-btn11">&#9472;</button>
+            <p id="movie-title-list11" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster12" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list12" class="movie-poster-list"></p></div>
+            <button id="delete-btn12">&#9472;</button>
+            <p id="movie-title-list12" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster13" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list13" class="movie-poster-list"></p></div>
+            <button id="delete-btn13">&#9472;</button>
+            <p id="movie-title-list13" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster14" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list14" class="movie-poster-list"></p></div>
+            <button id="delete-btn14">&#9472;</button>
+            <p id="movie-title-list14" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster15" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list15" class="movie-poster-list"></p></div>
+            <button id="delete-btn15">&#9472;</button>
+            <p id="movie-title-list15" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster16" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list16" class="movie-poster-list"></p></div>
+            <button id="delete-btn16">&#9472;</button>
+            <p id="movie-title-list16" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster17" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list17" class="movie-poster-list"></p></div>
+            <button id="delete-btn17">&#9472;</button>
+            <p id="movie-title-list17" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster18" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list18" class="movie-poster-list"></p></div>
+            <button id="delete-btn18">&#9472;</button>
+            <p id="movie-title-list18" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster19" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list19" class="movie-poster-list"></p></div>
+            <button id="delete-btn19">&#9472;</button>
+            <p id="movie-title-list19" class="movie-poster-list"></p>
+        </div>
         <div><img class="movie-poster-list" id="movie-poster20" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list20" class="movie-poster-list"></p></div>
-        <div><img class="movie-poster-list" id="movie-poster21" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button class="btn">&#9472;</button>
-            <p id="movie-title-list21" class="movie-poster-list"></p></div>
+            <button id="delete-btn20">&#9472;</button>
+            <p id="movie-title-list20" class="movie-poster-list"></p>
+        </div>
     </div>
 
     

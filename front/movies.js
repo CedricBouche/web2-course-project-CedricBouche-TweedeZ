@@ -1,4 +1,3 @@
-
 let config = null;
 //load my apikey
 
@@ -47,6 +46,7 @@ window.onload = () => {
 
     };
 
+
     let submitMovie = event => {
         event.preventDefault();
         let value = document.getElementById('options').value;
@@ -72,8 +72,10 @@ window.onload = () => {
         }
     };
 
+ 
+ 
+    
 
-  
 
     //event listener for the form
     document.getElementById('searchform').addEventListener('submit', submitForm);
@@ -81,3 +83,4 @@ window.onload = () => {
     document.getElementById('card').style.display = 'none';
     
 };
+

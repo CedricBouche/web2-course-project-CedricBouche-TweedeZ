@@ -4,123 +4,40 @@ html,body{
     font-family:'Nunito', sans-serif;
 }
 
-/*----------Login & Register---------- */
-.background {
-    position: absolute;
-    top: 0;
-    left: 50%; 
-    width: 50%; 
-    height: 100%;
-    float: left;
-    margin-top: 0;
-}
-
-.title{
-    margin-left: 10%;
-    font-size: 80px;
-    color: #ed4435;
-}
-
-
-
-.welcome{
-    margin-left: 20%;
-    margin-top: 8%;
-    font-size: 30px;
-}
-
-
-#email{
-    margin-left: 12%;
-    width: 23%;
-    height: 50px;
-    border-radius: 100px;
-    border-color: black;
-    border-width: 1px;
-    padding-left: 55px;
-    font-size: larger;
-}
-
-#password{
-    margin-left: 12%;
-    width: 23%;
-    height: 50px;
-    margin-top: 20px;
-    border-radius: 100px;
-    border-color: black;
-    border-width: 1px;
-    padding-left: 55px;
-    font-size: larger;
-}
-
-.mail{
-    position: absolute;
-    margin-left: 13%;
-    margin-top: 19px;
-    width: 25px;
-}
-
-
-.password{
-    position: absolute;
-    margin-left: 13%;
-    margin-top: 32px;
-    width: 20px;
-}
-
-
-#button-login{
-    margin-left: 12%;
-    width: 26.25%;
-    height: 55px;
-    margin-top: 20px;
-    border-radius: 100px;
-    border-color: #ed4435;
-    background-color: #ed4435 ;
-    color: #fff;
-    border-width: 1px;
-    float: center;
-    font-size: larger;
-    cursor: pointer;
-}
-
-
-#extra{
-    margin-left: 17%;
-    margin-top: 2%;
-}
-
-#link-register{
-    text-decoration: none;
-    color: #ed4435 ;
-}
+/*----------Nav------------*/
 
 .movie-nav{
 background-color: #ed4435;
-height: 140px;
+height: 170px;
+}
+
+a #nav{
+    margin-top: 30%;
 }
 
 
 nav a {
+    margin-top: 3.5%;
     color: #ffffff;
     text-decoration: none;
-    margin-right: 2em;
-    float: right;
-    margin-top: 40px;
     font-size: 15pt;
     font-weight: bold;
-
+    margin-left: 4%;
+    float: left;
 }
+
+
+
 
 .selected {
     border-bottom-style: solid;
 }
 
 
+
 .movie-nav li, ul {
     display: inline;
     cursor: pointer;
-    margin: 0;
 }
 
 .seenimage{
@@ -134,17 +51,12 @@ nav a {
     border-bottom: 2px solid #fff;
     background: transparent;
     float: right;
-    margin-top: 70px;
-    margin-right: 50px;
+    margin-right: 60px;
     width: 20%;
     color: #ffffff;
     font-size: medium;
-    margin-top: 60px;
+    margin-top: 70px;
 }
-
-
-
-
 
 .form-control-content{
     outline: 0;
@@ -158,41 +70,6 @@ nav a {
     color: #ffffff;
     font-size: medium;
     margin-top: 60px;
-}
-
-#account{
-    margin-top: 20px;
-}
-
-
-
-
-#lastchild{
-    margin-right: 40%;
-}
-
-
-/* Bron: https://www.w3schools.com/howto/howto_css_loader.asp */
-#loader {
-    border: 1em solid #ffffff;
-    border-top: 1em solid #343434;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    animation: spin 2s linear infinite;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 /* add button on the poster */
@@ -252,21 +129,10 @@ nav a {
     margin-right: 6em;
 }
 
-
-
-.movieinfo {
-    margin-left: 250px;
-    width: 300px;
-}
-
-.all{
-    margin-left: 1em;
-}
-
 .btn-primary{
     float: right;
     margin-right: 3%;
-    margin-top: 2.5%;
+    margin-top: 3.5%;
     border: none;
     background-color: #ed4435 ;
     color: #fff;
@@ -279,6 +145,7 @@ nav a {
     margin-left: 1em;
     font-size: 30px;
     color: #ed4435;
+    float: left;
 }
 
 #card{
@@ -325,16 +192,6 @@ nav a {
     font-size: 1.5em;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 #options{
     background-color: none;
@@ -366,41 +223,67 @@ nav a {
     margin-top: 300px;
 }
 
-.dropbtn {
-    background-color: transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    margin-right: 80px;
-    margin-top: 25px;
+
+.movie-poster-list {
+    width: 40%;
+    height: 200px;
+    margin-left: 2.5em;
+    font-size: 1em;
 }
-  
-.dropdown {
-    position: relative;
-    display: inline-block;
+
+.movie-title{
+    font-size: 2em;
 }
-  
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: 130px;
-    height: 30px;
+
+p .movie-list-list{
+    max-width: 1px;
 }
-  
-.dropdown-content a {
-    color: black;
-    text-decoration: none;
-    display: block;
+
+#movies{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-top: 2%;
+    justify-content: space-evenly;
     float: left;
-    margin: 0;
+}
+
+
+
+.filter-title{
+    float: left;
+    margin-left: 8%;
+    margin-top: 1.8em;
+}
+
+
+#filter{
+    float: left;
+    margin-top: 1.8%;
     margin-left: 1em;
 }
+
+#delete-btn{
+    cursor: pointer;
+}
+
+#edit-txt{
+    float: left;
+    margin-left: 73%;
+    margin-top: 2.1%;
+}
+
+#edit {
+    float: right;
+    margin-right: 3%;
+    margin-top: 1.8%;
+    cursor: pointer;
+}
+
+#edit :focus {
+    background-color: #ed4435;
+}
+
   
 
 
