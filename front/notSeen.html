@@ -10,38 +10,39 @@
 <body>
     <header>
         <nav class="movie-nav" >
-            <ul>
-                <li><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
-                <div class="dropdown" style="float:right;">
-                    <button class="dropbtn"><img src="img/account.png" id="account" alt="account" width="40px"></button>
-                    <div class="dropdown-content" style="left:0;">
-                    <a href="login.html">Log Out</a>
-                    </div>
-                </div>
-                <form id="searchform">
-                  <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
-                  <input type="text" class="form-control" id="inputTitle">
-                </form>
-                <li class="indexnav"><a href="#" class="selected" id="lastchild">NotSeen</a></li>
-                <li class="indexnav"><a href="seen.html"  id="seen">Seen</a></li>
-                <li class="indexnav"><a href="index.html"  id="all">Search</a></li>
-            </ul>
-         </nav>
+            <li class="indexnav"><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
+            <li class="indexnav"><a href="index.html"  id="nav">Add</a></li>
+            <li class="indexnav"><a href="seen.html"  id="nav">Seen</a></li>
+            <li class="indexnav"><a href="#" id="nav" class="selected">NotSeen</a></li>
+            <li class="indexnav"><form id="searchform">
+              <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
+              <input type="text" class="form-control" id="inputTitle">
+            </form></li>
+           </nav>
     </header>
     <br>
-    <h1 class="seen-title" >notSeen</h1>
+    <h1 class="title1" >notSeen</h1>
+    <p class="filter-title">Sort by:</p>
+    <select name="filter" id="filter">
+        <option value="A - Z">A - Z</option>
+        <option value="Z - A">Z - A</option>
+    </select>
+    <p  id="edit-txt">Edit</p>
+    <img type="button" src="img/Edit@2x.png" alt="Edit icon" id="edit" width="1.5%">
     <div id="movies" class="flex-container">
-        <div><img class="movie-poster-list" id="movie-poster-notSeen" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+        <div><img class="movie-poster-list" id="NotSeen-poster" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
             <button  class="btn">&#9472;</button>
-        <p id="movie-title-list-notSeen" class="movie-poster-list"></p></div>
-
-        <div><img class="movie-poster-list" id="movie-poster-notSeen1" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-            <button  class="btn">&#9472;</button>
-            <p id="movie-title-list-notSeen1" class="movie-poster-list"></p></div>
-
-            <div><img class="movie-poster-list" id="movie-poster-notSeen2" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
-                <button  class="btn">&#9472;</button>
-                <p id="movie-title-list-notSeen2" class="movie-poster-list"></p></div>
+        <p id="NotSeen-title-list" class="movie-poster-list"></p></div>
+        <div><img class="movie-poster-list" id="NotSeen-poster1" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+            <button class="btn">&#9472;</button>
+            <p id="NotSeen-title-list1" class="movie-poster-list"></p> </div>
+        <div><img class="movie-poster-list" id="NotSeen-poster2" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+            <button class="btn">&#9472;</button>
+            <p id="NotSeen-title-list2" class="movie-poster-list"></p></div>
+        <div><img class="movie-poster-list" id="NotSeen-poster3" src="https://m.media-amazon.com/images/" class="card-img" alt="...">
+            <button class="btn">&#9472;</button>
+            <p id="NotSeen-title-list3" class="movie-poster-list"></p></div>
+        </div>
     </div>
     
 </body>
