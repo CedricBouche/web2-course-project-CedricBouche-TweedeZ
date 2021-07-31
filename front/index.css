@@ -15,7 +15,6 @@ a #nav{
     margin-top: 30%;
 }
 
-
 nav a {
     margin-top: 3.5%;
     color: #ffffff;
@@ -27,13 +26,9 @@ nav a {
 }
 
 
-
-
 .selected {
     border-bottom-style: solid;
 }
-
-
 
 .movie-nav li, ul {
     display: inline;
@@ -72,61 +67,11 @@ nav a {
     margin-top: 60px;
 }
 
-/* add button on the poster */
-.flex-container button {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #CD151A;
-    color: #ffffff;
-    border-radius: 50%;
-    border-style: none;
-    margin-left: -2em;
-    width: 2em;
-    height: 2em;
-}
-
-.btn {
-    font-size: medium;
-    font-weight: bold;
-}
-
-.seen-title {
-    margin-left: 2.5em;
-    top: 10%;
-}
-
 .seenimage {
     width: 3em;
     height: 3em;
     float: left;
     margin-right: 3em;
-}
-
-
-
-#add-button.btn {
-    transform: translate(-50%, -50%);
-    background-color: #CD151A;
-    color: #ffffff;
-    border-radius: 50%;
-    border-style: none;
-    margin: 0;
-    width: 2em;
-    height: 2em;
-    margin-left: 35%;
-    position: relative;
-}
-
-.notSeen-button {
-    background-color: #CD151A;
-    color: #ffffff;
-    border: none;
-    height: 2em;
-    width: 15%;
-    border-radius: 15px;
-    float: right;
-    margin-right: 6em;
 }
 
 .btn-primary{
@@ -140,6 +85,30 @@ nav a {
     font-size: larger;
     cursor: pointer;
 }
+
+/* add button on the poster */
+
+.delete-btn{
+    position: absolute;
+    right: 75px;
+    background-color: #ed4435;
+    border: none;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    color: #fff;
+    top: -8px;
+    cursor: pointer;
+}
+
+.grid{
+    float: left;
+    width: 100%;
+}
+
+
+
+/*----------Search card------------*/
 
 .title1{
     margin-left: 1em;
@@ -157,26 +126,6 @@ nav a {
     margin-left: 2em;
     margin-top: 2em;
 
-}
-
-#movie-poster-search:hover{
-    animation-name: movie-animation;
-    animation-duration: 2s;
-    animation-fill-mode: both;
-    transition-timing-function: ease-in;
-
-}
-
-@keyframes movie-animation {
-    0% {
-        transform: perspective(400px) rotateY(8deg) scale(1);
-    }
-    20% {
-        transform: perspective(400px) rotateY(-13deg) scale(1.1);
-    }
-    100%{
-        transform: perspective(400px) rotateY(0deg) scale(1.2);
-    }
 }
 
 .card-body{
@@ -201,6 +150,7 @@ nav a {
     width: 12%;
 }
 
+
 .btnAdd{
     width: 200px;
     height: 35px;
@@ -224,94 +174,116 @@ nav a {
 }
 
 
-.movie-poster-list {
-    width: 40%;
-    height: 200px;
-    margin-left: 2.5em;
-    font-size: 1em;
+.movie-poster-image {   
+    height: 180px;
 }
 
-.movie-title{
-    font-size: 2em;
-}
-
-p .movie-list-list{
-    max-width: 1px;
-}
-
-#movies{
+/* #movies{
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
-    margin-top: 2%;
+    margin-top: 1%;
+    margin-right: 4%;
     justify-content: space-evenly;
     float: left;
+} */
+
+
+.movies-grid{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 250px;
+}
+
+.NotSeen-grid{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 250px;
+}
+
+.grid-item{
+    position: relative;
+    margin-bottom: 20px;
 }
 
 
+
+
+
+/*----------Poster Animation------------*/
+
+#movie-poster-search:hover{
+    animation-name: movie-animation;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    transition-timing-function: ease-in;
+
+}
+
+@keyframes movie-animation {
+    0% {
+        transform: perspective(400px) rotateY(8deg) scale(1);
+    }
+    20% {
+        transform: perspective(400px) rotateY(-13deg) scale(1.1);
+    }
+    100%{
+        transform: perspective(400px) rotateY(0deg) scale(1.2);
+    }
+}
+
+/*----------Filter------------*/
 
 .filter-title{
     float: left;
     margin-left: 8%;
-    margin-top: 1.8em;
 }
 
 
 #filter{
     float: left;
-    margin-top: 1.8%;
+    margin-top: 1%;
     margin-left: 1em;
 }
 
-#delete-btn{
+#btnFilter{
+    width: 70px;
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 100px;
+    border-color: #ed4435;
+    background-color: #ed4435 ;
+    color: #fff;
+    border-width: 1px;
+    float: center;
+    font-size: larger;
     cursor: pointer;
 }
 
+/*----------Edit------------*/
+
+
 #edit-txt{
     float: left;
-    margin-left: 73%;
+    margin-left: 70%;
     margin-top: 2.1%;
 }
 
 #edit {
     float: right;
-    margin-right: 3%;
+    margin-right: 6%;
     margin-top: 1.8%;
     cursor: pointer;
+    position: relative;
 }
 
-#edit :focus {
-    background-color: #ed4435;
+#ok_button{
+    float: right;
+    margin-top: 1.8%;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 0.8%;
 }
-
-  
-
-
-
-
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

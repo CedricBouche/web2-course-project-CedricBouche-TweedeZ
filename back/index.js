@@ -10,8 +10,6 @@ const bgRouter = express.Router();
 const port =  process.env.PORT|| 3000;
 
 
-
-
 //Mongo config
 const MongoClient = require('mongodb').MongoClient;                                                                                                                                      
 app.use(express.urlencoded());
@@ -23,13 +21,8 @@ const client = new MongoClient(mongoose.connect, {useNewUrlParser: true});
 
 app.use('/api',bgRouter);
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-  res.sendFile(path.join(__dirname, "front/register.html" ));
-});
-
 //Router for Seen
-bgRouter.route('/movies')
+bgRouter.route('/seen')
 .get((req,res)=> {
   collection = db.collection("movies");
   collection.find({}).toArray((error, result)=>{
@@ -41,7 +34,7 @@ bgRouter.route('/movies')
 })
 .post((req,res) => {
   collection = db.collection("movies");
-  collection.insertOne(req.body).then(result => {
+  collection.insertOne(req.body),{unique: true}.then(result => {
     console.log(result);
   });
   res.send('Somthing');
@@ -54,6 +47,7 @@ bgRouter.route('/movies')
   res.send('Somthing')
 
 });
+
 
 //Router for NotSeen
 bgRouter.route('/notSeen')
@@ -68,12 +62,11 @@ bgRouter.route('/notSeen')
 })
 .post((req,res) => {
   collection = db.collection("notSeen");
-  collection.insertOne(req.body).then(result => {
+  collection.insertOne(req.body),{unique: true}.then(result => {
     console.log(result);
   });
   res.send('Somthing');
 });
-
 
 //Start the server
 app.listen(port, () => {
@@ -87,7 +80,3 @@ app.listen(port, () => {
   });
   
 });
-
-
-
-

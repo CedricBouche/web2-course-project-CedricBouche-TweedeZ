@@ -1,6 +1,4 @@
-let config = null;
 //load my apikey
-
 async function getConfig(){
     let resp = await fetch('config.json');
     let data = await resp.json();
@@ -25,14 +23,12 @@ window.onload = () => {
         //DOM Manipulation
         document.getElementById('movie-title').innerText = movie.Title;
         document.getElementById('movie-plot').innerText = movie.Plot;
-        document.getElementById('movie-releasedate').innerText = movie.Released;
         document.getElementById('movie-poster-search').setAttribute('src', movie.Poster);
         //Show the card
         document.getElementById('card').style.display = 'inline-block';
 
     }
 
-   
     let submitForm = event => {
         event.preventDefault();
         let value = document.getElementById('inputTitle').value;
@@ -57,13 +53,14 @@ window.onload = () => {
             Poster: poster
         }
         if(value=="Seen"){
-            fetch('http://localhost:3000/api/movies', {
+            // Source: https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/
+            fetch('http://localhost:4000/api/seen', {
             method: "POST",
             body: JSON.stringify(movie),
             headers: {"Content-type": "application/json; charset=UTF-8"}
 })
         }else{
-            fetch('http://localhost:3000/api/notSeen', {
+            fetch('http://localhost:4000/api/notSeen', {
                 method: "POST",
                 body: JSON.stringify(movie),
                 headers: {"Content-type": "application/json; charset=UTF-8"}
