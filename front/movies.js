@@ -26,7 +26,6 @@ window.onload = () => {
         document.getElementById('movie-poster-search').setAttribute('src', movie.Poster);
         //Show the card
         document.getElementById('card').style.display = 'inline-block';
-
     }
 
     let submitForm = event => {
@@ -43,15 +42,19 @@ window.onload = () => {
     };
 
 
+
     let submitMovie = event => {
         event.preventDefault();
         let value = document.getElementById('options').value;
         let title = document.getElementById('movie-title').innerText;
         let poster = document.getElementById('movie-poster-search').getAttribute('src');
+        let score = document.getElementById('score-options').value;
         let movie = {
             Title: title,
-            Poster: poster
+            Poster: poster,
+            Score: score
         }
+        console.log(movie)
         if(value=="Seen"){
             // Source: https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/
             fetch('http://localhost:4000/api/seen', {
@@ -60,15 +63,18 @@ window.onload = () => {
             headers: {"Content-type": "application/json; charset=UTF-8"}
 })
         }else{
+            // Source: https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/
             fetch('http://localhost:4000/api/notSeen', {
                 method: "POST",
                 body: JSON.stringify(movie),
                 headers: {"Content-type": "application/json; charset=UTF-8"}
         })
 
-        }
+        } 
     };
 
+
+   
  
  
     
@@ -78,6 +84,10 @@ window.onload = () => {
     document.getElementById('searchform').addEventListener('submit', submitForm);
     //hide the card for now
     document.getElementById('card').style.display = 'none';
-    
 };
+
+
+
+
+
 

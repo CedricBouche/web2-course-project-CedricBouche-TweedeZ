@@ -10,13 +10,13 @@
 <body>
   <header>
     <nav class="movie-nav" >
-      <li class="indexnav"><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
+      <li class="indexnav"><a href="#"><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li></a> 
       <li class="indexnav"><a href="#" class="selected" id="nav">Add</a></li>
       <li class="indexnav"><a href="seen.html"  id="nav">Seen</a></li>
       <li class="indexnav"><a href="notSeen.html" id="nav">NotSeen</a></li>
       <li class="indexnav"><form id="searchform">
         <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
-        <input type="text" class="form-control" id="inputTitle">
+        <input type="text" class="form-control" id="inputTitle" required>
       </form></li>
      </nav>
 </header>
@@ -32,10 +32,21 @@
             <div class="card-body">
               <h5 id="movie-title" class="card-title"></h5>
               <p id="movie-plot" class="card-text"></p>
-              <select name="options" id="options">
+              <select name="options" id="options" >
                 <option value="NotSeen">NotSeen</option>
                 <option value="Seen">Seen</option>
               </select>
+              <div id="score">
+                <p id="txt-score">Score</p>
+                <select name="score" id="score-options">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
               <hr>
               <button class="btnAdd" id="btnAdd">Add to my list</button>
             </div>

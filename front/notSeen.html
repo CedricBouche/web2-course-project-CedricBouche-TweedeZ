@@ -10,28 +10,25 @@
 <body>
     <header>
         <nav class="movie-nav" >
-            <li class="indexnav"><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li>
+            <li class="indexnav"><a href="search.html"><img class="seenimage" src="/front/img/logo.png" alt="logo Seen Not Seen" width="80px"></li></a> 
             <li class="indexnav"><a href="search.html"  id="nav">Add</a></li>
             <li class="indexnav"><a href="seen.html"  id="nav">Seen</a></li>
             <li class="indexnav"><a href="#" id="nav" class="selected">NotSeen</a></li>
-            <li class="indexnav"><form id="searchform">
-              <button  id="form_button" type="submit" class="btn-primary"><img src="img/search.png" alt="search" width="40px"></button> 
-              <input type="text" class="form-control" id="inputTitle">
-            </form></li>
            </nav>
     </header>
     <br>
-    <h1 class="title1">Seen</h1>
+    <h1 class="title1">NotSeen</h1>
     <br>
-    <p class="filter-title">Sort by:</p>
+    <p class="filter-title">Sort Title:</p>
     <select name="filter" id="filter">
-        <option value="A - Z">A - Z</option>
-        <option value="Z - A">Z - A</option>
+        <option value="A - Z">Oplopend</option>
+        <option value="Z - A">Aflopend</option>
     </select>
+    <button id="btnFilter" >filter</button>
     <div>
-    <p  id="edit-txt">Edit</p>
+    <p  id="edit-txt-not">Edit</p>
     <img type="button" src="img/Edit@2x.png" alt="Edit icon" id="edit" width="1.5%">
-    <img type="button" id="ok_button" src="img/color_Edit@2x.png" alt="Edit icon"  width="1.5%">
+    <img type="button" id="ok_button" class="ok_button_not" src="img/color_Edit@2x.png" alt="Edit icon"  width="1.5%">
     </div>
     <div class="grid">
         <div id="NotSeenmovies" class="NotSeen-grid">

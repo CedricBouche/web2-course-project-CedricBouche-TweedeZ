@@ -12,6 +12,8 @@ const port =  process.env.PORT|| 3000;
 
 //Mongo config
 const MongoClient = require('mongodb').MongoClient;                                                                                                                                      
+const { error } = require('console');
+const { title } = require('process');
 app.use(express.urlencoded());
 app.use(express.json());
 mongoose.connect = "mongodb+srv://admin:admin@cluster0.ahsgc.mongodb.net/Web2-Course-project?retryWrites=true&w=majority";
@@ -34,20 +36,25 @@ bgRouter.route('/seen')
 })
 .post((req,res) => {
   collection = db.collection("movies");
-  collection.insertOne(req.body),{unique: true}.then(result => {
+  collection.insertOne(req.body).then(result => {
     console.log(result);
   });
   res.send('Somthing');
 })
-.delete((req,res) => {
-  collection = db.collection("movies");
-  collection.remove(req.body).then(result => {
+.put((req,res) => {
+  collection = db.collection("movies")
+  collection.updateOne(req.body),{$set:{Score: "2"}}.then(result => {
     console.log(result);
   });
-  res.send('Somthing')
-
+  res.send("Somthing");
+})
+.delete((req,res) => {
+  collection = db.collection("movies");
+  collection.deleteOne(req.body).then(result => {
+    console.log(result);
+  });
+  res.send('Somthing');
 });
-
 
 //Router for NotSeen
 bgRouter.route('/notSeen')
@@ -63,6 +70,13 @@ bgRouter.route('/notSeen')
 .post((req,res) => {
   collection = db.collection("notSeen");
   collection.insertOne(req.body),{unique: true}.then(result => {
+    console.log(result);
+  });
+  res.send('Somthing');
+})
+.delete((req,res) => {
+  collection = db.collection("notSeen");
+  collection.deleteOne(req.body).then(result => {
     console.log(result);
   });
   res.send('Somthing');

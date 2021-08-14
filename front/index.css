@@ -8,15 +8,19 @@ html,body{
 
 .movie-nav{
 background-color: #ed4435;
-height: 170px;
+height: 100px;
 }
 
-a #nav{
-    margin-top: 30%;
+nav a .seenimage {
+    margin-top: 15%;
 }
+
+#nav{
+    margin-top: 2.5%;
+}
+
 
 nav a {
-    margin-top: 3.5%;
     color: #ffffff;
     text-decoration: none;
     font-size: 15pt;
@@ -26,18 +30,15 @@ nav a {
 }
 
 
-.selected {
+.selected  {
     border-bottom-style: solid;
 }
+
+
 
 .movie-nav li, ul {
     display: inline;
     cursor: pointer;
-}
-
-.seenimage{
-    margin-left: 30px;
-    margin-top: 50px;
 }
 
 .form-control{
@@ -50,7 +51,7 @@ nav a {
     width: 20%;
     color: #ffffff;
     font-size: medium;
-    margin-top: 70px;
+    margin-top: 55px;
 }
 
 .form-control-content{
@@ -77,7 +78,7 @@ nav a {
 .btn-primary{
     float: right;
     margin-right: 3%;
-    margin-top: 3.5%;
+    margin-top: 2.5%;
     border: none;
     background-color: #ed4435 ;
     color: #fff;
@@ -110,12 +111,7 @@ nav a {
 
 /*----------Search card------------*/
 
-.title1{
-    margin-left: 1em;
-    font-size: 30px;
-    color: #ed4435;
-    float: left;
-}
+
 
 #card{
     margin-left: 1em;
@@ -123,7 +119,7 @@ nav a {
 
 #movie-poster-search{
     float: left;
-    margin-left: 2em;
+    margin-left: 4em;
     margin-top: 2em;
 
 }
@@ -148,6 +144,7 @@ nav a {
     border: 1px solid#343434 ;
     border-radius: 2em;
     width: 12%;
+    float: center;
 }
 
 
@@ -170,42 +167,35 @@ nav a {
     font-weight: 500;
     float: center;
     margin-left: 600px;
-    margin-top: 300px;
+    margin-top: 400px;
 }
 
 
 .movie-poster-image {   
     height: 180px;
+    position: relative;
 }
 
-/* #movies{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-    margin-top: 1%;
-    margin-right: 4%;
-    justify-content: space-evenly;
-    float: left;
-} */
+
 
 
 .movies-grid{
     text-align: center;
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: 250px;
+    grid-template-rows: 300px;
 }
 
 .NotSeen-grid{
     text-align: center;
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: 250px;
+    grid-template-rows: 300px;
 }
 
 .grid-item{
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 
@@ -215,32 +205,67 @@ nav a {
 /*----------Poster Animation------------*/
 
 #movie-poster-search:hover{
-    animation-name: movie-animation;
+    animation-name: poster-animation;
     animation-duration: 2s;
     animation-fill-mode: both;
     transition-timing-function: ease-in;
 
 }
 
-@keyframes movie-animation {
+@keyframes poster-animation {
     0% {
-        transform: perspective(400px) rotateY(8deg) scale(1);
-    }
-    20% {
-        transform: perspective(400px) rotateY(-13deg) scale(1.1);
+        transform:  scale(1);
     }
     100%{
-        transform: perspective(400px) rotateY(0deg) scale(1.2);
+        transform:  scale(1.2);
     }
 }
+
+/*----------Poster Animation Delete------------*/
+/* #list-poster :hover{
+    animation: shake;
+} */
+
+
+
+.animate {
+    animation-name: shake;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes shake{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 0px) rotate(0deg); }
+    70% { transform: translate(3px, 2px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(-1px, 2px) rotate(0deg); }
+    100% { transform: translate(-3px, 0px) rotate(-1deg); }
+  }
+
 
 /*----------Filter------------*/
 
 .filter-title{
     float: left;
-    margin-left: 8%;
+    margin:0;
+    padding-left: 100px;
+    padding-top: 70px;
 }
 
+
+#filter-sort{
+    float: left;
+    margin-top: 1%;
+    margin-left: 1em;
+}
 
 #filter{
     float: left;
@@ -249,9 +274,9 @@ nav a {
 }
 
 #btnFilter{
-    width: 70px;
+    width: 7%;
     height: 25px;
-    margin-top: 15px;
+    margin-top: 83px;
     margin-left: 10px;
     border-radius: 100px;
     border-color: #ed4435;
@@ -261,6 +286,7 @@ nav a {
     float: center;
     font-size: larger;
     cursor: pointer;
+    float: left;
 }
 
 /*----------Edit------------*/
@@ -268,22 +294,124 @@ nav a {
 
 #edit-txt{
     float: left;
-    margin-left: 70%;
-    margin-top: 2.1%;
+    margin-top: 83px;
+    margin-left:46%;
+}
+
+#edit-txt-not{
+    float: left;
+    margin-top: 83px;
+    margin-left:44%;
+
 }
 
 #edit {
     float: right;
-    margin-right: 6%;
-    margin-top: 1.8%;
+    margin-right: 5%;
+    margin-top: 4.3%;
     cursor: pointer;
     position: relative;
 }
 
 #ok_button{
     float: right;
-    margin-top: 1.8%;
+    margin-top: 4.3%;
     cursor: pointer;
     position: absolute;
-    margin-left: 0.8%;
+    margin-left: 1.6%;
 }
+
+.ok_button_not{
+    margin-left: 1.8%;
+}
+
+#txt-score{
+    float: left;
+    margin-left: 15%;
+    margin-top: -2.2%;
+    
+}
+
+#score-options{
+    background-color: #ed4435;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    float: left;
+    margin-left: 1%;
+    margin-top: -1.8%;
+}
+
+hr{
+    margin: 2em;
+    margin-left: 0;
+    float: center;
+}
+
+#ster{
+    float: left;
+    position: absolute;
+    margin-top: 135px;
+    left: 30%;
+}
+
+select#options-score{
+    float: left;
+    position: absolute;
+    left: 35%;
+    top: 147px;
+    color: #fff;
+    font-size: medium;
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* Delete the arrow in de dropdown options */
+    -webkit-appearance: none;
+}
+
+select#filter{
+    background: none;
+    font-family:'Nunito';
+    font-size: medium;
+    margin-top: 83px;
+    border-radius: 100px;
+    width: 5%;
+    text-align: center;
+    color: #ed4435;
+}
+
+select#filter-sort{
+    background: none;
+    font-family:'Nunito';
+    font-size: medium;
+    margin-top: 83px;
+    border-radius: 100px;
+    width: 6%;
+    text-align: center;
+    color: #ed4435;
+}
+
+.filter-title{
+    font-size: larger;
+    margin-top: 13px;
+}
+
+.title1{
+    font-size: 80px;
+    float: left;
+    margin-left: 1em;
+    color: #ed4435;
+    float: left;
+}
+
+#not-score{
+    display: none;
+}
+
+
+
+
+
+
+
+
