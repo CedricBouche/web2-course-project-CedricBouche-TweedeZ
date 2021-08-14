@@ -54,7 +54,7 @@ window.onload = () => {
   
 
     async function runNotSeenMovies(){
-        const URI = await fetch('http://localhost:4000/api/notSeen');
+        const URI = await fetch('https://web2-course-project2api-cedric.herokuapp.com/api/notSeen');
         const data = await URI.json();
         //Sort by alphabet
         let value = document.getElementById('filter').value;
@@ -106,7 +106,7 @@ window.onload = () => {
         }
         console.log(movie);
 
-        fetch('http://localhost:4000/api/seen',{
+        fetch('https://web2-course-project2api-cedric.herokuapp.com/api/seen',{
         method: "DELETE",
         body: JSON.stringify(movie),
         headers: {"Content-type": "application/json; charset=UTF-8"}})
@@ -126,7 +126,7 @@ window.onload = () => {
         }
         console.log(movie);
 
-        fetch('http://localhost:4000/api/notSeen',{
+        fetch('https://web2-course-project2api-cedric.herokuapp.com/api/notSeen',{
         method: "DELETE",
         body: JSON.stringify(movie),
         headers: {"Content-type": "application/json; charset=UTF-8"}})
@@ -196,7 +196,7 @@ function updateSeenMovie(){
         Score: score
     }
     console.log(movie);
-    fetch('http://localhost:4000/api/seen',{
+    fetch('https://web2-course-project2api-cedric.herokuapp.com/api/seen',{
     method: "PUT",
     body: JSON.stringify(score),
     headers: {"Content-type": "application/json; charset=UTF-8"}})
