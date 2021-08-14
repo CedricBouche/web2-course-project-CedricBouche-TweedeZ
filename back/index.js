@@ -82,6 +82,10 @@ bgRouter.route('/notSeen')
   res.send('Somthing');
 });
 
+app.get("/",(req,res) => {
+  res.sendFile(path.join(__dirname,'back/public/info.html'));
+})
+
 //Start the server
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
