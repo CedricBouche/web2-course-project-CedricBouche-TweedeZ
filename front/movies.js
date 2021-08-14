@@ -57,14 +57,14 @@ window.onload = () => {
         console.log(movie)
         if(value=="Seen"){
             // Source: https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/
-            fetch('http://localhost:4000/api/seen', {
+            fetch('https://web2-course-project2api-cedric.herokuapp.com/api/seen', {
             method: "POST",
             body: JSON.stringify(movie),
             headers: {"Content-type": "application/json; charset=UTF-8"}
 })
         }else{
             // Source: https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/
-            fetch('http://localhost:4000/api/notSeen', {
+            fetch('https://web2-course-project2api-cedric.herokuapp.com/api/notSeen', {
                 method: "POST",
                 body: JSON.stringify(movie),
                 headers: {"Content-type": "application/json; charset=UTF-8"}

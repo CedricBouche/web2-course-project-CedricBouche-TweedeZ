@@ -2,7 +2,7 @@ window.onload = () => {
     
     
     async function runSeenMovies(){
-        const URI = await fetch ('http://localhost:4000/api/seen');
+        const URI = await fetch ('https://web2-course-project2api-cedric.herokuapp.com/api/seen');
         const resp = await URI.json();
         console.log(resp);
         //Sort by alphabet
