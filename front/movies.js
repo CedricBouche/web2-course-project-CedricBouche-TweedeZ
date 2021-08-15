@@ -1,10 +1,10 @@
 //load my apikey
-// async function getConfig(){
-//     let resp = await fetch('config.json');
-//     let data = await resp.json();
-//     config = data;
+async function getConfig(){
+    let resp = await fetch('config.json');
+    let data = await resp.json();
+    config = data;
 
-// }
+}
 
 window.onload = () => {
     console.log('loaded');
