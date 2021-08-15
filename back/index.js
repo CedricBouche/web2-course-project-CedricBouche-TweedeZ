@@ -94,6 +94,7 @@ bgRouter.route('/seen/:seenId')
   }
   return res.json(seen);
 });
+});
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/info.html'));
