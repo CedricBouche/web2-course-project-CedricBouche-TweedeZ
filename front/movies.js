@@ -1,18 +1,19 @@
 //load my apikey
-// async function getConfig(){
-//     let resp = await fetch('config.json');
-//     let data = await resp.json();
-//     config = data;
+async function getConfig(){
+    let resp = await fetch('config.json');
+    let data = await resp.json();
+    config = data;
+    console.log(data);
 
-// }
+}
 
 window.onload = () => {
     console.log('loaded');
-    
+    getConfig();
 
 
     async function getData(searchparameter){
-        let url = `http://www.omdbapi.com/?t=${searchparameter}&apikey=3d4bbe8c`;
+        let url = `${config.baseurl}t=${searchparameter}${config.apikey}`;
         let resp = await fetch(url);
         let data = await resp.json();
         return data;
