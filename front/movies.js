@@ -12,7 +12,7 @@ window.onload = () => {
 
 
     async function getData(searchparameter){
-        let url = `http://www.omdbapi.com/?t=${searchparameter}&apikey=3d4bbe8c`;
+        let url = `${config.baseurl}s=${searchparameter}${config.apikey}`;
         let resp = await fetch(url);
         let data = await resp.json();
         return data;
