@@ -39,21 +39,21 @@ bgRouter.route('/seen')
   collection.insertOne(req.body).then(result => {
     console.log(result);
   });
-  res.send('Somthing');
+  res.send('Data is sent to seen');
 })
 .put((req,res) => {
   collection = db.collection("movies")
-  collection.updateOne(req.body),{$set:{Score: "2"}}.then(result => {
+  collection.updateOne(req.body),{$set:{Score: req.body.score}}.then(result => {
     console.log(result);
   });
-  res.send("Somthing");
+  res.send('Data is been up to date');
 })
 .delete((req,res) => {
   collection = db.collection("movies");
   collection.deleteOne(req.body).then(result => {
     console.log(result);
   });
-  res.send('Somthing');
+  res.send('Object is deleted');
 });
 
 //Router for NotSeen
@@ -72,14 +72,15 @@ bgRouter.route('/notSeen')
   collection.insertOne(req.body),{unique: true}.then(result => {
     console.log(result);
   });
-  res.send('Somthing');
+  res.send('Data is sent to seen');
+  
 })
 .delete((req,res) => {
   collection = db.collection("notSeen");
   collection.deleteOne(req.body).then(result => {
     console.log(result);
   });
-  res.send('Somthing');
+  res.send('Object is deleted');
 });
 
 app.get('/', (req, res) => {
