@@ -25,6 +25,7 @@ window.onload = () => {
         document.getElementById('movie-title').innerText = movie.Title;
         document.getElementById('movie-plot').innerText = movie.Plot;
         document.getElementById('movie-poster-search').setAttribute('src', movie.Poster);
+        console.log(movie.Poster);
         //Show the card
         document.getElementById('card').style.display = 'inline-block';
     }
