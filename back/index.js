@@ -102,7 +102,7 @@ bgRouter.route('/seen/:seenId')
 .get((req, res) => {
   collection = db.collection("movies");
   const query = {
-      _id: ObjectId(req.params.seenId)
+      _id: ObjectId(seenId)
   }
   collection.find(query).toArray((err, result) => {
       if (err) {
