@@ -85,32 +85,21 @@ bgRouter.route('/notSeen')
 
 
 
-bgRouter.route('/seen=_id')
+bgRouter.route('/seen/:seenId')
 .get((req, res) => {
   collection = db.collection("movies");
-  collection.findById({_id}) .then(result => {
-  console.log(result);
-  });
-  res.send('somthing');
+  collection.findById(req.params.seenId,(err,seen)  => {
+  if(err) {
+    return res.send(err);
+  }
+  return res.json(seen);
 });
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/info.html'));
 });
 
-bgRouter.route('/seen/:seenId')
-.get((req, res) => {
-  collection = db.collection("movies");
-  const query = {
-      _id: ObjectId(seenId)
-  }
-  collection.find(query).toArray((err, result) => {
-      if (err) {
-          return res.status(500).send(err);
-      }
-      return res.json(result);
-  })
-})
+
 
 
 
