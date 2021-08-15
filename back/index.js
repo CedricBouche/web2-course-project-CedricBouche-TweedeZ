@@ -88,7 +88,7 @@ bgRouter.route('/notSeen')
 bgRouter.route('/seen/:seenId')
 .get((req, res) => {
   collection = db.collection("movies");
-  collection.find({_id: ObjectId("6115259cd99e2303dc183e2d")}).toArray((error, result)=>{
+  collection.find({ _id: '611525ded99e2303dc183e2f' }).toArray((error, result)=>{
     if(error) {
       return res.status(500).send(error);
     }
