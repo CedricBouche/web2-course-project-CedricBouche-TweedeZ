@@ -101,9 +101,6 @@ app.get('/', (req, res) => {
 bgRouter.route('/seen/:seenId')
 .get((req, res) => {
   collection = db.collection("movies");
-  if (req.params.seenId.match(/^[0-9a-fA-F]{24}$/) === null) {
-      return res.send('Not a valid ID!');
-  }
   const query = {
       _id: ObjectId(req.params.seenId)
   }
