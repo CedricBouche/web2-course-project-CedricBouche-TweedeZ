@@ -83,9 +83,37 @@ bgRouter.route('/notSeen')
   res.send('Object is deleted');
 });
 
+
+
+bgRouter.route('/seen=_id')
+.get((req, res) => {
+  collection = db.collection("movies");
+  collection.findById({_id}) .then(result => {
+  console.log(result);
+  });
+  res.send('somthing');
+});
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/info.html'));
 });
+
+bgRouter.route('/seen/:seenId')
+.get((req, res) => {
+  collection = db.collection("movies");
+  if (req.params.seenId.match(/^[0-9a-fA-F]{24}$/) === null) {
+      return res.send('Not a valid ID!');
+  }
+  const query = {
+      _id: ObjectId(req.params.seenId)
+  }
+  collection.find(query).toArray((err, result) => {
+      if (err) {
+          return res.status(500).send(err);
+      }
+      return res.json(result);
+  })
+})
 
 
 
