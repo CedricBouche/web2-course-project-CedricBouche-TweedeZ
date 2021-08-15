@@ -8,7 +8,7 @@
 
 window.onload = () => {
     console.log('loaded');
-    // getConfig();
+    
 
 
     async function getData(searchparameter){
