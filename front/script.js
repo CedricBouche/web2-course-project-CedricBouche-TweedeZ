@@ -47,7 +47,6 @@ window.onload = () => {
             btns[i].addEventListener("click", deleteMovie); 
             btns[i].style.display = 'none';
         }
-        console.log(btns[1]);
     }
     runSeenMovies();
     document.getElementById('btnFilter').addEventListener('click', runSeenMovies);
@@ -114,7 +113,6 @@ window.onload = () => {
     }
 
     function deleteNotSeen ()  {
-        console.log("Test")
         btns = document.getElementsByClassName("delete-btn");
         let title = document.getElementById('notseen-title').innerText;
         let poster = document.getElementById('not-poster').getAttribute('src');
@@ -179,17 +177,13 @@ window.onload = () => {
         }
         
     })
-
-
-    
-   
 }
 
 
 function updateSeenMovie(){
     let title = document.getElementById('seen-title').innerText;
     let poster = document.getElementById('list-poster').getAttribute('src');
-    let score = "3";
+    let score = document.getElementById('options-score').value;
     let movie = {
         Title: title,
         Poster: poster,

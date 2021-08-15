@@ -2,10 +2,8 @@
 const path = require('path');
 //Express
 const express = require('express');
-const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
-app.use(cors());
 const bgRouter = express.Router();
 const port =  process.env.PORT|| 3000;
 
@@ -99,10 +97,6 @@ bgRouter.route('/seen/:seenId')
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/info.html'));
 });
-
-
-
-
 
 //Start the server
 app.listen(port, () => {

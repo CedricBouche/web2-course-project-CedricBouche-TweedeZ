@@ -1,0 +1,14 @@
+Verbeteringen vorig project:
+ 
+1) Data via een form posten naar de juiste databank
+2) object kunnen verwijderen
+3) loading animatie verwijderd en op de posters geanimeerd (scale en shake)
+4) wit achtergrond gebruikt => zorgt voor beter leesbaarheid
+5) Filter toegevoegd
+6) Watchlist verwijderd en samengevoegd in NotSeen
+7) Delete buttons toegevoegd om movies te verwijderen
+8) Score toegevoegd (voor de update)
+9) Nieuw logo ontworpen die beter met het nieuw Design past.
+Logo => Bron: https://www.flaticon.com/free-icon/popcorn_3439699
+
+
